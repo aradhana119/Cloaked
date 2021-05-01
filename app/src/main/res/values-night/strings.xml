@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021 Aradhana Ghosh.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<resources>
+    <string name="cover_image">Upload cover image (JPEG/PNG)</string>
+
+    <string name="secret_message">Enter secret message:</string>
+
+    <string name="message_hint">Message to be hidden</string>
+
+    <string name="pwd">Enter password:</string>
+
+    <string name="pwd_hint">Password for verification</string>
+
+    <string name="encode_start">Start encoding</string>
+
+    <string name="save_encoded_image">Save encoded image</string>
+
+    <string name="cover_image_desc">Cover image in JPEG/PNG format</string>
+
+    <string name="upload_success">Successfully uploaded</string>
+
+    <string name="encoded_image">Upload encoded image (PNG)</string>
+
+    <string name="encoded_image_desc">Encoded image in PNG format</string>
+
+    <string name="extracted_message">Extracted message:</string>
+
+    <string name="extracted_hint">Uncovered message</string>
+
+    <string name="decode_start">Start decoding</string>
+
+    <string name="help">Help</string>
+
+    <string name="how_to_use">How to use</string>
+
+    <string name="start_encoding_info">Click on this button to start the process of hiding your
+        message in the chosen cover image.</string>
+
+    <string name="start_decoding_info">Click on this button to start the process of extracting the
+        message from the uploaded image.</string>
+
+    <string name="save_image_info">Click on this button to save the encoded image in .png format to
+        your mobile gallery. If you wish to share the encoded image through file transfer software
+        or social media apps like Whatsapp, share the image as a document to avoid internal
+        compression and thus, loss of data.</string>
+
+    <string name="cover_image_info">Click on this button to upload an image where you can hide your
+        message. Only JPEG or PNG images are allowed.</string>
+
+    <string name="encoded_image_info">Click on this button to upload an encoded image from which you
+        wish to extract a hidden message. Only PNG images are allowed as JPEG images involve lossy
+        compression which may lead to loss of data.</string>
+
+    <string name="encode_info">Click on this button if you want to hide a secret message in a
+        JPEG/PNG image using a password for future verification.</string>
+
+    <string name="decode_info">Click on this button if you want to extract a secret message from a
+        JPEG/PNG image after password verification.</string>
+
+    <string name="contact_label">Contact us</string>
+
+    <string name="contact_info">This application is made for commercial purposes. Any queries or
+        feedback related to the app can be conveyed to us at xyz@gmail.com. For any discrepancies,
+        reach out to us at abc@gmail.com.</string>
+
+    <string name="faq_label">FAQs</string>
+
+    <string name="faq_q1">Q1. What is the major use of this application?</string>
+
+    <string name="faq_a1">A1. This application implements steganography which allows users to hide
+        their private data inside images without the fear of detection. Only authorized people can
+        access the decoded data from the encoded images after password verification.</string>
+
+    <string name="faq_q2">Q2. Is my data secured?</string>
+
+    <string name="faq_a2">A2. The algorithm for steganography implemented in this application ensures
+        that the final encoded image contains imperceptible changes so that the existence of a
+        hidden message is not detectable by anyone except the user. The user can use a password to
+        encode the secret message so that she/he can allow only authorized recipients to access the
+        hidden data by verifying the password.</string>
+
+    <string name="faq_q3">Q3. Is there any limitation on usage?</string>
+
+    <string name="faq_a3">A3. This application has been made to meet the satisfaction of the
+        customers. There are no bounds on the limits of usage.</string>
+
+    <string name="icon_credit">Icons made by Freepik from www.flaticon.com</string>
+
+    <string name="processing_complete">Processing complete</string>
+</resources>
