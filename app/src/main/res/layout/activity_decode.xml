@@ -14,119 +14,125 @@
   ~  limitations under the License.
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".Decode">
 
-    <ImageView
-        android:id="@+id/encodedImageView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="25dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerInside"
-        android:contentDescription="@string/encoded_image_desc" />
-
-    <Button
-        android:id="@+id/uploadEncodedImage"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:padding="15dp"
-        android:text="@string/encoded_image"
-        android:textColor="#ffffff" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/pwdVerificationLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/uploadEncodedImage"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="45dp"
-        android:gravity="center_horizontal"
-        android:text="@string/pwd"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/encodedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="25dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/encoded_image_desc"
+            android:scaleType="centerInside" />
 
-    <EditText
-        android:id="@+id/pwdVerificationText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/pwdVerificationLabel"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:ems="10"
-        android:hint="@string/pwd_hint"
-        android:inputType="textPassword"
-        android:textSize="14sp"
-        android:autofillHints="password" />
+        <TextView
+            android:id="@+id/isDecoded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/encodedImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
 
-    <TextView
-        android:id="@+id/extractedMessageLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pwdVerificationText"
-        android:layout_alignStart="@id/pwdVerificationLabel"
-        android:layout_alignLeft="@id/pwdVerificationLabel"
-        android:layout_marginTop="35dp"
-        android:gravity="center_horizontal"
-        android:text="@string/extracted_message"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/uploadEncodedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isDecoded"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:text="@string/encoded_image"
+            android:textColor="#ffffff" />
 
-    <TextView
-        android:id="@+id/extractedMessageText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/extractedMessageLabel"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:ems="10"
-        android:hint="@string/extracted_hint"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/pwdVerificationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uploadEncodedImage"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center_horizontal"
+            android:text="@string/pwd"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/startDecoding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="30dp"
-        android:gravity="center_horizontal"
-        android:padding="15dp"
-        android:text="@string/decode_start"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="14sp" />
+        <EditText
+            android:id="@+id/pwdVerificationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/pwdVerificationLabel"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:autofillHints="password"
+            android:ems="10"
+            android:hint="@string/pwd_hint"
+            android:inputType="textPassword"
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/isDecoded"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/encodedImageView"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/extractedMessageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwdVerificationText"
+            android:layout_alignStart="@id/pwdVerificationLabel"
+            android:layout_alignLeft="@id/pwdVerificationLabel"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="@string/extracted_message"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/extractedMessageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/extractedMessageLabel"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:ems="10"
+            android:hint="@string/extracted_hint"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/startDecoding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/extractedMessageText"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            android:text="@string/decode_start"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</ScrollView>

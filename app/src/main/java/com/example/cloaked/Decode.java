@@ -142,7 +142,6 @@ public class Decode extends AppCompatActivity {
         if (!verifyPassword())
             Toast.makeText(this, "Please enter a valid password", Toast.LENGTH_SHORT).show();
         else {
-
             StringBuilder msg = new StringBuilder();
             StringBuilder rowsBin = new StringBuilder();
             int index = getActualPasswordSize();
@@ -166,9 +165,9 @@ public class Decode extends AppCompatActivity {
             }
 
             int rows = Integer.parseInt(rowsBin.toString(), 2);
-            int lim = index + 1 + rows;
+            int lim = index + 1 + rows, startPos = index + 2;
 
-            for (int y = index + 2; y <= lim; y++) {
+            for (int y = startPos; y <= lim; y++) {
                 StringBuilder sb = new StringBuilder();
                 for (int x = 0; x < 2; x++) {
                     int pixel = originalImage.getPixel(x, y);

@@ -13,131 +13,138 @@
   ~  See the License for the specific language governing permissions and
   ~  limitations under the License.
   -->
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".Encode">
 
-    <ImageView
-        android:id="@+id/coverImageView"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="25dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/cover_image_desc"
-        android:scaleType="centerInside" />
-
-    <Button
-        android:id="@+id/uploadCoverImage"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:padding="15dp"
-        android:text="@string/cover_image"
-        android:textColor="#ffffff" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/messageLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/uploadCoverImage"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="45dp"
-        android:gravity="center_horizontal"
-        android:text="@string/secret_message"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/coverImageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="25dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cover_image_desc"
+            android:scaleType="centerInside" />
 
-    <EditText
-        android:id="@+id/messageText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/messageLabel"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:autofillHints="message"
-        android:ems="10"
-        android:hint="@string/message_hint"
-        android:inputType="textMultiLine"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/isEncoded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coverImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
 
-    <TextView
-        android:id="@+id/pwdLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/messageText"
-        android:layout_alignStart="@id/messageLabel"
-        android:layout_alignLeft="@id/messageLabel"
-        android:layout_marginTop="35dp"
-        android:gravity="center_horizontal"
-        android:text="@string/pwd"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/uploadCoverImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/isEncoded"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:text="@string/cover_image"
+            android:textColor="#ffffff" />
 
-    <EditText
-        android:id="@+id/pwdText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/pwdLabel"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:autofillHints="password"
-        android:ems="10"
-        android:hint="@string/pwd_hint"
-        android:inputType="textPassword"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/messageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uploadCoverImage"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center_horizontal"
+            android:text="@string/secret_message"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
-    <Button
-        android:id="@+id/startEncoding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="30dp"
-        android:padding="15dp"
-        android:text="@string/encode_start"
-        android:textSize="14sp"
-        android:visibility="visible" />
+        <EditText
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/messageLabel"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:autofillHints="message"
+            android:ems="10"
+            android:hint="@string/message_hint"
+            android:inputType="textMultiLine"
+            android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/saveImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="30dp"
-        android:padding="15dp"
-        android:text="@string/save_encoded_image"
-        android:textSize="14sp"
-        android:visibility="gone" />
 
-    <TextView
-        android:id="@+id/isEncoded"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/coverImageView"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/pwdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messageText"
+            android:layout_alignStart="@id/messageLabel"
+            android:layout_alignLeft="@id/messageLabel"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="@string/pwd"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/pwdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/pwdLabel"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:autofillHints="password"
+            android:ems="10"
+            android:hint="@string/pwd_hint"
+            android:inputType="textPassword"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/startEncoding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwdText"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:padding="15dp"
+            android:text="@string/encode_start"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/saveImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwdText"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="50dp"
+            android:padding="15dp"
+            android:text="@string/save_encoded_image"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</ScrollView>
+
+

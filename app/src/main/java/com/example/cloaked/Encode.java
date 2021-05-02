@@ -87,8 +87,8 @@ public class Encode extends AppCompatActivity {
 
         startEncoding.setOnClickListener(v -> {
             int pwdLen = pwd.getText().toString().length();
-            if (pwdLen < 8 || pwdLen > 32)
-                Toast.makeText(this, "Password length should be between 8 and 32 characters", Toast.LENGTH_SHORT).show();
+            if (pwdLen < 6 || pwdLen > 32)
+                Toast.makeText(this, "Password length should be between 6 and 32 characters", Toast.LENGTH_SHORT).show();
             else
                 encodeText();
         });
@@ -109,7 +109,7 @@ public class Encode extends AppCompatActivity {
     //Choose a cover image from gallery
     private void chooseImage() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        String [] mimeTypes = {"image/jpg","image/jpeg", "image/png"};
+        String[] mimeTypes = {"image/jpg", "image/jpeg", "image/png"};
         intent.setType("image/*");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
@@ -311,13 +311,12 @@ public class Encode extends AppCompatActivity {
                 } else {
                     encodedImage.setPixel(x, y, Color.argb(a, r, g, b));
                 }
-
             }
         }
+
         isEncoded.setText(R.string.processing_complete);
         startEncoding.setVisibility(View.GONE);
         saveImage.setVisibility(View.VISIBLE);
-
     }
 
     //Convert a string into an 8bit form
