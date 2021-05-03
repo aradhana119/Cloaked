@@ -87,8 +87,8 @@ public class Encode extends AppCompatActivity {
 
         startEncoding.setOnClickListener(v -> {
             int pwdLen = pwd.getText().toString().length();
-            if (pwdLen < 6 || pwdLen > 32)
-                Toast.makeText(this, "Password length should be between 6 and 32 characters", Toast.LENGTH_SHORT).show();
+            if (pwdLen < 6 || pwdLen > 12)
+                Toast.makeText(this, "Password length should be between 6 and 12 characters", Toast.LENGTH_SHORT).show();
             else
                 encodeText();
         });
