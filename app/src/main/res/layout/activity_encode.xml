@@ -42,8 +42,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
-            android:textAlignment="center"
-            android:textColor="@color/white" />
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/uploadCoverImage"
