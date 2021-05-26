@@ -104,6 +104,13 @@
     <string name="faq_a3">A3. This application has been made to meet the satisfaction of the
         customers. There are no bounds on the limits of usage.</string>
 
+    <string name="faq_q4">Q4. Why are there random characters in my decoded message?</string>
+
+    <string name="faq_a4">A4. This may occur if the cover image selected for encoding was not large
+        enough to conceal the compressed message also. Every compression algorithm has a restriction
+        on the compressed size. I will continue to improve the compression algorithm as much as
+        possible. However, the best solution is to reduce the message length or choose a bigger cover image.</string>
+
     <string name="icon_credit">Icons made by Freepik from www.flaticon.com</string>
 
     <string name="processing_complete">Processing complete</string>
